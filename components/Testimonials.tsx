@@ -17,13 +17,13 @@ const TESTIMONIALS: Testimonial[] = [
 
 const Testimonials: React.FC = () => {
   return (
-    <div className="space-y-12">
+    <div className="space-y-16">
       {TESTIMONIALS.map((t, idx) => (
-        <div key={idx} className="max-w-xl">
-          <p className="text-sm italic text-zinc-400 mb-2 leading-relaxed">
+        <div key={idx} className="max-w-2xl">
+          <p className="text-xl italic text-zinc-400 mb-4 leading-relaxed">
             "{t.quote}"
           </p>
-          <p className="text-[11px] uppercase tracking-widest text-zinc-600">
+          <p className="text-[11px] uppercase tracking-[0.2em] text-zinc-600 font-semibold">
             — {t.author}, {t.designation}
           </p>
         </div>

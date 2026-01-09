@@ -15,9 +15,15 @@ Answer questions about Surya's work, the Lift Off microgrant, his vision for roa
 Always keep responses concise (under 3 sentences unless asked for detail).
 `;
 
+/**
+ * Fetches response from Gemini following strict SDK guidelines.
+ */
 export const getGeminiResponse = async (userPrompt: string) => {
   try {
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+    // Initialize with direct process.env.API_KEY as per guidelines
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    
+    // Use ai.models.generateContent with model and contents
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
       contents: userPrompt,
@@ -29,6 +35,7 @@ export const getGeminiResponse = async (userPrompt: string) => {
       },
     });
 
+    // Access .text property directly (not a method)
     return response.text;
   } catch (error) {
     console.error("Gemini API Error:", error);

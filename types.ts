@@ -14,6 +14,7 @@ export interface Testimonial {
   designation: string;
 }
 
+// Added missing ChatMessage interface to fix the import error in AIAgent.tsx
 export interface ChatMessage {
   role: 'user' | 'assistant';
   content: string;

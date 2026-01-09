@@ -12,7 +12,7 @@ const PROJECTS: Project[] = [
   {
     title: "Roadyz",
     role: "CEO & Founder",
-    description: "Gamified road safety app for children (5-14). Shark Tank India Round 1. Backed by Angels. 10k+ users.",
+    description: "Gamified road safety app for children. Shark Tank India Round 1. Backed by Angels. 10k+ users.",
     isCurrent: true
   },
   {
@@ -55,14 +55,14 @@ const Projects: React.FC<ProjectsProps> = ({ type }) => {
   const filteredProjects = PROJECTS.filter(p => type === 'current' ? p.isCurrent : !p.isCurrent);
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-16">
       {filteredProjects.map((project, idx) => (
-        <div key={idx} className="group">
-          <div className="flex items-baseline justify-between mb-1">
-            <h3 className="text-sm font-medium text-white">{project.title}</h3>
-            <span className="text-[10px] uppercase tracking-widest text-zinc-700">{project.role}</span>
+        <div key={idx} className="group flex flex-col space-y-3">
+          <div className="flex items-baseline justify-between">
+            <h3 className="text-xl font-medium text-zinc-100">{project.title}</h3>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-zinc-700 font-bold">{project.role}</span>
           </div>
-          <p className="text-sm text-zinc-500 leading-relaxed max-w-xl">
+          <p className="text-lg text-zinc-500 leading-relaxed max-w-2xl">
             {project.description}
           </p>
         </div>
