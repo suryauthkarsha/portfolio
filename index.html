@@ -1,14 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surya Uthkarsha</title>
+    <title>Surya Uthkarsha — Entrepreneur & Changemaker</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -24,13 +23,22 @@
         a {
             color: #eee;
             text-decoration: underline;
-            text-underline-offset: 3px;
+            text-underline-offset: 4px;
             text-decoration-color: #333;
             transition: text-decoration-color 0.2s, color 0.2s;
         }
         a:hover {
             color: #fff;
             text-decoration-color: #eee;
+        }
+        .section-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: #52525b; /* zinc-600 */
+            font-weight: 600;
+            margin-bottom: 3rem;
+            display: block;
         }
         ::selection {
             background: #222;
@@ -39,20 +47,186 @@
         ::-webkit-scrollbar {
             display: none;
         }
+        .project-card:hover h3 {
+            color: #fff;
+        }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.35.0"
-  }
-}
-</script>
 </head>
-<body class="p-8 md:p-32">
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+<body class="p-8 md:p-32 max-w-4xl mx-auto">
+    <div class="space-y-32 py-16">
+        <!-- Header -->
+        <header class="space-y-8">
+            <div class="space-y-2">
+                <h1 class="text-6xl font-medium tracking-tighter text-zinc-100">Surya Uthkarsha</h1>
+                <p class="text-[11px] uppercase tracking-[0.4em] text-zinc-600 font-bold">Entrepreneur & Changemaker</p>
+            </div>
+            <p class="text-2xl text-zinc-400 max-w-2xl leading-relaxed tracking-tight">
+                14-year-old builder at the Founders Office of <a href="#">Emerging Equity</a>. Scaling early-stage startups while reimagining road safety and news accessibility for a new generation.
+            </p>
+            <nav class="flex space-x-8 text-sm font-medium">
+                <a href="https://x.com/suryauthkarsha" target="_blank" class="no-underline text-zinc-500 hover:text-zinc-100 transition-colors">Twitter</a>
+                <a href="https://linkedin.com/in/surya-uthkarsha-8b2015312" target="_blank" class="no-underline text-zinc-500 hover:text-zinc-100 transition-colors">LinkedIn</a>
+                <a href="mailto:suryauthkarsha@gmail.com" class="no-underline text-zinc-500 hover:text-zinc-100 transition-colors">Email</a>
+            </nav>
+        </header>
+
+        <main class="space-y-40">
+            <!-- Current Focus -->
+            <section>
+                <span class="section-label">Current Focus</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-16">
+                    <div class="project-card space-y-3">
+                        <div class="space-y-1">
+                            <h3 class="text-xl font-medium text-zinc-100 transition-colors">United YC</h3>
+                            <span class="text-[10px] uppercase tracking-[0.2em] text-zinc-600 font-bold">Lead Uniter</span>
+                        </div>
+                        <p class="text-zinc-500 leading-relaxed">Connecting student leaders to global platforms like the UN ECOSOC chamber. Advocating for youth-driven change through cross-border collaboration.</p>
+                    </div>
+                    <div class="project-card space-y-3">
+                        <div class="space-y-1">
+                            <h3 class="text-xl font-medium text-zinc-100 transition-colors">Roadyz</h3>
+                            <span class="text-[10px] uppercase tracking-[0.2em] text-zinc-600 font-bold">CEO & Founder</span>
+                        </div>
+                        <p class="text-zinc-500 leading-relaxed">Gamified road safety app for children aged 5-14. Impacting 10,000+ users. Raised funding and cleared Shark Tank India Round 1.</p>
+                    </div>
+                    <div class="project-card space-y-3">
+                        <div class="space-y-1">
+                            <h3 class="text-xl font-medium text-zinc-100 transition-colors">Edza AI</h3>
+                            <span class="text-[10px] uppercase tracking-[0.2em] text-zinc-600 font-bold">Head of Growth</span>
+                        </div>
+                        <p class="text-zinc-500 leading-relaxed">AI-powered tutor for education. Scaled to 40k users with 1.5M impressions. Raising 100 Million INR for expansion in 2025.</p>
+                    </div>
+                    <div class="project-card space-y-3">
+                        <div class="space-y-1">
+                            <h3 class="text-xl font-medium text-zinc-100 transition-colors">Zews</h3>
+                            <span class="text-[10px] uppercase tracking-[0.2em] text-zinc-600 font-bold">CEO</span>
+                        </div>
+                        <p class="text-zinc-500 leading-relaxed">Building a news app specifically for Gen Z with quick, high-impact summaries to make staying informed simple and engaging.</p>
+                    </div>
+                    <div class="project-card space-y-3">
+                        <div class="space-y-1">
+                            <h3 class="text-xl font-medium text-zinc-100 transition-colors">The Marg Initiative</h3>
+                            <span class="text-[10px] uppercase tracking-[0.2em] text-zinc-600 font-bold">Founder</span>
+                        </div>
+                        <p class="text-zinc-500 leading-relaxed">Nonprofit promoting sustainable road safety under SDG 3.6. Collaborated with Bengaluru Police for events reaching 50k+ people.</p>
+                    </div>
+                    <div class="project-card space-y-3">
+                        <div class="space-y-1">
+                            <h3 class="text-xl font-medium text-zinc-100 transition-colors">Youth in Transit</h3>
+                            <span class="text-[10px] uppercase tracking-[0.2em] text-zinc-600 font-bold">Founder</span>
+                        </div>
+                        <p class="text-zinc-500 leading-relaxed">Podcast featuring Ivy League achievers. Providing guidance and inspiration for students aiming for top-tier global universities.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section>
+                <span class="section-label">Education</span>
+                <div class="space-y-12">
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-medium text-zinc-100">National Public School, Rajajinagar</h3>
+                        <p class="text-zinc-500 italic">Student • 2016 — 2027</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                            <div class="p-6 bg-zinc-900/20 rounded-lg border border-zinc-900 hover:border-zinc-800 transition-colors">
+                                <p class="text-[9px] uppercase tracking-[0.3em] text-zinc-600 mb-3 font-bold">Academics</p>
+                                <p class="text-zinc-300 text-sm leading-relaxed">4.0 GPA. Ranks in International & Zonal Logiquids Mental Aptitude Olympiads.</p>
+                            </div>
+                            <div class="p-6 bg-zinc-900/20 rounded-lg border border-zinc-900 hover:border-zinc-800 transition-colors">
+                                <p class="text-[9px] uppercase tracking-[0.3em] text-zinc-600 mb-3 font-bold">Leadership</p>
+                                <p class="text-zinc-300 text-sm leading-relaxed">President of Student Council. Heading the Finance Club and various school-wide initiatives.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Expertise -->
+            <section>
+                <span class="section-label">Expertise</span>
+                <div class="flex flex-wrap gap-x-10 gap-y-6">
+                    <span class="text-sm font-medium text-zinc-500 hover:text-zinc-100 transition-colors cursor-default">Strategic Planning</span>
+                    <span class="text-sm font-medium text-zinc-500 hover:text-zinc-100 transition-colors cursor-default">Product Development</span>
+                    <span class="text-sm font-medium text-zinc-500 hover:text-zinc-100 transition-colors cursor-default">Fundraising</span>
+                    <span class="text-sm font-medium text-zinc-500 hover:text-zinc-100 transition-colors cursor-default">Public Speaking</span>
+                    <span class="text-sm font-medium text-zinc-500 hover:text-zinc-100 transition-colors cursor-default">Data Analysis</span>
+                    <span class="text-sm font-medium text-zinc-500 hover:text-zinc-100 transition-colors cursor-default">Urban Research</span>
+                    <span class="text-sm font-medium text-zinc-500 hover:text-zinc-100 transition-colors cursor-default">Policy Advocacy</span>
+                    <span class="text-sm font-medium text-zinc-500 hover:text-zinc-100 transition-colors cursor-default">Networking</span>
+                    <span class="text-sm font-medium text-zinc-500 hover:text-zinc-100 transition-colors cursor-default">Sustainability</span>
+                    <span class="text-sm font-medium text-zinc-500 hover:text-zinc-100 transition-colors cursor-default">Entrepreneurship</span>
+                    <span class="text-sm font-medium text-zinc-500 hover:text-zinc-100 transition-colors cursor-default">Event Planning</span>
+                    <span class="text-sm font-medium text-zinc-500 hover:text-zinc-100 transition-colors cursor-default">Data Visualization</span>
+                </div>
+            </section>
+
+            <!-- Archive -->
+            <section>
+                <span class="section-label">Archive</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-16">
+                    <div class="project-card space-y-3 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all">
+                        <div class="space-y-1">
+                            <h3 class="text-lg font-medium text-zinc-100">Capital Hub</h3>
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-zinc-600 font-bold">Founders Office</span>
+                        </div>
+                        <p class="text-sm text-zinc-500 leading-relaxed">Researching market trends and coordinating between founders and investors for startup operations.</p>
+                    </div>
+                    <div class="project-card space-y-3 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all">
+                        <div class="space-y-1">
+                            <h3 class="text-lg font-medium text-zinc-100">Novus Debate Society</h3>
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-zinc-600 font-bold">Founder</span>
+                        </div>
+                        <p class="text-sm text-zinc-500 leading-relaxed">Global youth platform for debating pressing world issues with participants from over 20+ cities.</p>
+                    </div>
+                    <div class="project-card space-y-3 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all">
+                        <div class="space-y-1">
+                            <h3 class="text-lg font-medium text-zinc-100">The Nile Clothing</h3>
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-zinc-600 font-bold">Founder</span>
+                        </div>
+                        <p class="text-sm text-zinc-500 leading-relaxed">Sustainable youth-driven streetwear line. Provided merchandise for various organizations and NGOs.</p>
+                    </div>
+                    <div class="project-card space-y-3 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all">
+                        <div class="space-y-1">
+                            <h3 class="text-lg font-medium text-zinc-100">Project Surya</h3>
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-zinc-600 font-bold">Volunteer</span>
+                        </div>
+                        <p class="text-sm text-zinc-500 leading-relaxed">Research and community outreach for diabetes awareness and lifestyle change prevention.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section>
+                <span class="section-label">Voices</span>
+                <div class="space-y-24">
+                    <div class="max-w-2xl border-l border-zinc-900 pl-10">
+                        <p class="text-3xl italic text-zinc-300 mb-8 leading-snug tracking-tight">
+                            "He was building. At 13. I was blown away... Surya is already using technology to solve real-world problems."
+                        </p>
+                        <p class="text-[11px] uppercase tracking-[0.3em] text-zinc-600 font-bold">
+                            — Ashish Singhal, Co-founder @ CoinSwitch
+                        </p>
+                    </div>
+                    <div class="max-w-2xl border-l border-zinc-900 pl-10">
+                        <p class="text-3xl italic text-zinc-300 mb-8 leading-snug tracking-tight">
+                            "His clarity of purpose and courage to build at such a young age is simply remarkable."
+                        </p>
+                        <p class="text-[11px] uppercase tracking-[0.3em] text-zinc-600 font-bold">
+                            — Sandeep Alur, CTO @ Microsoft Innovation Hub India
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="pt-32 pb-16 text-[10px] uppercase tracking-[0.4em] text-zinc-700 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex gap-8">
+                <span>Bengaluru, India</span>
+                <span>4.0 GPA • Student Council</span>
+            </div>
+            <span class="font-bold">© 2025 Surya Uthkarsha</span>
+        </footer>
+    </div>
 </body>
 </html>
