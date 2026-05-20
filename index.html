@@ -19,11 +19,13 @@
         h1 {
             font-family: 'JetBrains Mono', monospace;
             color: #fff;
-            font-size: 2.25rem;
-            letter-spacing: -0.05em;
+            font-size: 3.75rem;
+            line-height: 1.1;
+            letter-spacing: -0.06em;
             margin-bottom: 2.5rem;
-            font-weight: 700;
+            font-weight: 800;
             text-align: left;
+            text-shadow: 0 0 30px rgba(255,255,255,0.1);
         }
         b, strong {
             color: #fff;
@@ -52,7 +54,6 @@
             display: flex;
             align-items: center;
             gap: 0.85rem;
-            margin-bottom: 0.85rem;
             font-size: 1.05rem;
             color: #888;
             justify-content: flex-start;
@@ -98,13 +99,66 @@
         .inline-link:hover {
             text-decoration-color: #fff;
         }
+        .media-section {
+            margin-top: 3.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .media-heading {
+            font-family: 'JetBrains Mono', monospace;
+            color: #fff;
+            font-size: 1.15rem;
+            margin-bottom: 1.25rem;
+            font-weight: 500;
+        }
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 0.65rem;
+        }
+        .media-item {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.4rem 0.6rem;
+            color: #888;
+            border: 1px solid #222;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            background: #0a0a0a;
+            transition: all 0.15s ease;
+            text-decoration: none;
+        }
+        .media-item:hover {
+            color: #fff;
+            border-color: #444;
+            background: #111;
+        }
+        .media-item svg {
+            width: 12px;
+            height: 12px;
+            opacity: 0.5;
+        }
+        .media-item:hover svg {
+            opacity: 1;
+        }
+        .media-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-right: 8px;
+        }
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2.75rem;
+            }
+        }
     </style>
 <link rel="stylesheet" href="/index.css">
 </head>
 <body>
     <div class="content-wrap">
         <header>
-            <h1>hey, i am surya</h1>
+            <h1 id="intro-line">hey, i am surya</h1>
         </header>
 
         <main>
@@ -116,13 +170,19 @@
 
             <div class="section-gap">
                 <p>
-                    now i'm building in <b>stealth</b> (securing multiple grants, backed by liftoff fund, $2k credits from rork, $2k gcp from campus fund) with a target launch for q2. i'm also leading <b>roadyz</b>, which was recently funded by investors to build a dedicated version for the us market.
+                    i founded <a href="https://6bithq.in" target="_blank" class="inline-link"><b>6bithq.in</b></a> (events and media lab), hosting our flagship "void" backed by hashed, emergent, and tether with 1k+ attendees (from a16z, yc, harvard, yale, ef, f.inc). also hosting a tech roast show in june. previously, i was cgo at <b>10x.app</b> ($30k mrr), director at <b>nsri</b> (largest student-run research org), and had 1x exit (<b>founder zoo</b>).
                 </p>
             </div>
 
             <div class="section-gap">
                 <p>
-                    my nonprofit, <b>the marg initiative</b>, has reached 50k+ people in impact. i've had the opportunity to pitch my vision to the founders of <b>rapido</b>, <b>ather</b>, <b>phonepe</b>, <b>nobroker</b>, <b>shadowfax</b>, and the cto of <b>anthropic</b>.
+                    now i'm building in <b>stealth</b> (securing multiple grants, backed by liftoff fund, mercatus, and emergent ventures, $2k credits from rork, $2k gcp from campus fund) with a target launch for q2. i'm also leading <b>roadyz</b>, which was recently funded by investors to build a dedicated version for the us market.
+                </p>
+            </div>
+
+            <div class="section-gap">
+                <p>
+                    my nonprofit, <b>the marg initiative</b>, has reached 50k+ people in impact. i was named an <b>aditya birla force for good hero</b> and led <b>vibecon</b> (300/25k). i've pitched my vision to the founders of <b>rapido</b>, <b>ather</b>, <b>phonepe</b>, <b>nobroker</b>, <b>shadowfax</b>, the cto of <b>anthropic</b>, jared from <b>yc</b>, mukund from <b>emergent</b>, and tanay from <b>wispr flow</b>.
                 </p>
             </div>
 
@@ -130,6 +190,46 @@
                 <p>
                     faq: do you have time to chat? yes, i'm always down to meet builders and thinkers. you can book a <a href="https://cal.com/suryau" target="_blank" class="inline-link"><b>coffee chat</b></a>.
                 </p>
+            </div>
+
+            <div class="media-section">
+                <div class="media-heading">media coverage</div>
+                <div class="media-grid">
+                    <a href="https://www.ndtv.com/feature/14-year-old-builds-tinder-for-footpaths-app-to-let-bengaluru-citizens-rate-report-broken-pavements-11518728/amp/1" target="_blank" class="media-item"><span class="media-title">ndtv.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://www.hindustantimes.com/trending/tinder-for-footpaths-bengaluru-teen-develops-app-where-users-can-swipe-rate-and-report-footpaths-to-bbmp-101779196242024-amp.html" target="_blank" class="media-item"><span class="media-title">hindustantimes.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://www.moneycontrol.com/news/trends/14-year-old-builds-tinder-for-footpaths-app-lets-bengaluru-citizens-swipe-and-report-broken-pavements-13924228.html/amp" target="_blank" class="media-item"><span class="media-title">moneycontrol.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://www.timesnownews.com/viral/14-year-old-bengaluru-boy-builds-tinder-for-footpaths-app-users-can-swipe-rate-report-issues-to-bbmp-article-154353272/amp" target="_blank" class="media-item"><span class="media-title">timesnownews.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://www.ndtvprofit.com/technology/swipe-left-on-potholes-bengaluru-teen-builds-tinder-for-footpaths-to-fix-city-infra-11519380/amp/1" target="_blank" class="media-item"><span class="media-title">ndtvprofit.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://www.businesstoday.in/amp/latest/trends/story/tinder-for-footpaths-teen-creates-app-that-lets-bengaluru-swipe-on-broken-footpaths-532345-2026-05-19" target="_blank" class="media-item"><span class="media-title">businesstoday.in</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://newsfirstprime.com/bengaluru/bengaluru-teen-builds-tinder-for-footpaths-to-fix-broken-pavements-11852955" target="_blank" class="media-item"><span class="media-title">newsfirstprime.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://www.indiatoday.in/amp/trending-news/story/bengaluru-teen-builds-tinder-for-footpaths-to-fix-broken-pavements-2914259-2026-05-20" target="_blank" class="media-item"><span class="media-title">indiatoday.in</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://www.msn.com/en-in/money/news/14-year-old-builds-tinder-for-footpaths-app-to-let-bengaluru-citizens-rate-report-broken-roads/ar-AA23zFfB" target="_blank" class="media-item"><span class="media-title">msn.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://newskarnataka.com/bengaluru/bengaluru-teen-creates-app-to-report-footpaths/20052026/" target="_blank" class="media-item"><span class="media-title">newskarnataka.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://newsable.asianetnews.com/amp/karnataka-news/viral-alert-bengaluru-teen-creates-tinder-for-footpaths-app-to-fix-broken-roads-footpaths-aims-to-help-bbmp-articleshow-nhn33rp" target="_blank" class="media-item"><span class="media-title">asianetnews.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://curlytales.com/india/trending/did-you-know-bengaluru-has-a-tinder-for-footpaths-you-can-swipe-report-fix-footpaths/amp/" target="_blank" class="media-item"><span class="media-title">curlytales.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://www.siasat.com/bengaluru-teen-develops-rasthe-app-to-flag-potholes-and-damaged-footpaths-3474100/amp/" target="_blank" class="media-item"><span class="media-title">siasat.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Fbengaluru%2Ftinder-for-footpaths-bengaluru-teen-builds-app-to-tackle-citys-traffic-pothole-issues-4009499" target="_blank" class="media-item"><span class="media-title">deccanherald.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://kannada.oneindia.com/news/bengaluru/bengaluru-teen-builds-tinder-for-footpaths-rasthe-app-to-report-bad-pavements-directly-to-bbmp-454671.html" target="_blank" class="media-item"><span class="media-title">oneindia.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://thebetterindia.com/young-achievers/surya-uthkarsha-teen-road-safety-initiative-indian-awareness-among-children-11109911/amp" target="_blank" class="media-item"><span class="media-title">thebetterindia.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://www.newindianexpress.com/amp/story/cities/bengaluru/2026/Jan/25/towards-making-bengaluru-roads-safer" target="_blank" class="media-item"><span class="media-title">newindianexpress.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://www.news18.com/amp/viral/14-year-old-bengaluru-boy-turns-painful-childhood-accident-memory-into-road-safety-game-for-kids-tyd-ws-l-9955306.html" target="_blank" class="media-item"><span class="media-title">news18.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://thebetterindia.com/videos/society/he-taught-50000-people-road-safety-at-14-11734596/amp" target="_blank" class="media-item"><span class="media-title">thebetterindia.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://inshorts.com/en/amp_news/b-luru-teen-s--tinder-for-footpaths--idea-goes-viral-1779254302092" target="_blank" class="media-item"><span class="media-title">inshorts.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://www.news18.com/amp/india/tinder-for-footpaths-14-year-old-bengaluru-boy-creates-an-app-to-improve-pedestrian-safety-internet-reacts-ws-l-10102286.html" target="_blank" class="media-item"><span class="media-title">news18.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://www.newsbytesapp.com/news/business/y-combinator-to-host-its-first-startup-school-in-india/story" target="_blank" class="media-item"><span class="media-title">newsbytesapp.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://www.newsbytesapp.com/news/business/y-combinator-starts-1st-startup-school-in-india-april-18/tldr" target="_blank" class="media-item"><span class="media-title">newsbytesapp.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://www.firstpost.com/tech/yc-startup-school-in-india-inside-the-youth-led-ai-wave-redefining-the-future-of-work-13999712.html/amp" target="_blank" class="media-item"><span class="media-title">firstpost.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://startuppedia.in/startup-stories/13-yo-bangalore-student-is-building-a-gaming-app-to-raise-road-safety-awareness-among-children-7351164" target="_blank" class="media-item"><span class="media-title">startuppedia.in</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://www.linkedin.com/posts/bengaluru-authorities-footpaths-share-7462524029594402816-gcAy?utm_source=social_share_send&utm_medium=ios_app&rcm=ACoAAE9hV8YBbBYlly_JQA1LVKLnZVHsFMLKLPk&utm_campaign=copy_link" target="_blank" class="media-item"><span class="media-title">linkedin.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://voice.lapaas.com/y-combinator-starts-1st-startup-school-in-india/" target="_blank" class="media-item"><span class="media-title">voice.lapaas.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://m.dailyhunt.in/news/india/english/news+karnataka-epaper-newskarn/teen+creates+road+safety+game+to+teach+children+safe+habits-newsid-n704334082" target="_blank" class="media-item"><span class="media-title">dailyhunt.in</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://www.obnews.co/Index/newsDetail/id/14693354.html?val=76d6bdcfec70740cc6cf55232982d201&test=1" target="_blank" class="media-item"><span class="media-title">obnews.co</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://t-en-yd.obnews.co/Flow/News/id/14693354.html?val=76d6bdcfec70740cc6cf55232982d201" target="_blank" class="media-item"><span class="media-title">obnews.co</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://zoomout.substack.com/p/y-combinator-comes-to-india-builders" target="_blank" class="media-item"><span class="media-title">zoomout.substack.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://share.google/67Mp354oWwEcGwZjk" target="_blank" class="media-item"><span class="media-title">share.google</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Fbengaluru%2Fclass-10-student-in-bengaluru-makes-game-to-promote-road-safety-among-kids-3927133" target="_blank" class="media-item"><span class="media-title">deccanherald.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                    <a href="https://www.bharat.inc/p/lets-build-a-startup-with-a-13-year" target="_blank" class="media-item"><span class="media-title">bharat.inc</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                </div>
             </div>
 
             <div class="status-container">
@@ -146,10 +246,10 @@
                 <a href="https://cal.com/suryau" target="_blank">coffee</a>
             </nav>
 
-            <footer class="space-y-1">
-                <a href="https://x.com/suryauthkarsha" target="_blank" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
-                    <span>@suryauthkarsha</span>
+            <footer class="flex flex-col gap-3.5">
+                <a href="https://x.com/suryauthkarsha6" target="_blank" class="social-link">
+                    <svg width="20" height="20" viewBox="1.25 2.25 20.3 19.5" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                    <span>@suryauthkarsha6</span>
                 </a>
                 <a href="https://github.com/suryauthkarsha" target="_blank" class="social-link">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
@@ -181,6 +281,33 @@
         }
         updateTime();
         setInterval(updateTime, 60000);
+
+        // Scramble animation for intro line
+        const introLine = document.getElementById('intro-line');
+        const targetText = introLine.innerText;
+        const letters = "abcdefghijklmnopqrstuvwxyz";
+        let iteration = 0;
+        
+        setTimeout(() => {
+            const interval = setInterval(() => {
+                introLine.innerText = targetText
+                    .split("")
+                    .map((letter, index) => {
+                        if (letter === " " || letter === ",") return letter;
+                        if (index < iteration) {
+                            return targetText[index];
+                        }
+                        return letters[Math.floor(Math.random() * 26)];
+                    })
+                    .join("");
+                
+                if (iteration >= targetText.length) {
+                    clearInterval(interval);
+                }
+                
+                iteration += 1 / 3;
+            }, 45);
+        }, 150);
     </script>
 <script type="module" src="/index.tsx"></script>
 </body>
